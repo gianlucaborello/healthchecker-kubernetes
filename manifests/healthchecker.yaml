@@ -13,3 +13,9 @@ spec:
       containers:
         - name: healthchecker
           image: healthchecker
+          imagePullPolicy: IfNotPresent
+          args:
+            - "-redis"
+            - "redis"
+            - "-target"
+            - "backend"
