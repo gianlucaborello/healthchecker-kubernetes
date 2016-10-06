@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: healthchecker
+  namespace: critical-app
+spec:
+  template:
+    metadata:
+      labels:
+        app: critical-app
+        role: healthchecker
+    spec:
+      containers:
+        - name: healthchecker
+          image: healthchecker
